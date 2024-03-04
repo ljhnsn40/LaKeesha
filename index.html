@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Week</title>
+    <style>
+      html {
+            background-color: rgb(0, 0, 0);
+    }
+       
+        p {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            
+   }
+        
+        ul {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 0; 
+    }
+        li { display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            margin-bottom: 10px; /* Add margin at the bottom of each list item */
+    }
+
+        h2 {
+            color: white;
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            
+        }
+        .alert-button {
+        margin-left: 10px; /* Add margin to the left of the button */
+    }
+       h1{
+        text-align: center;
+        color: white;
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+       }
+    </style>
+
+</head> <h1> Show and Tell  ⁉️ </h1> 
+<body>
+    <p> <h2> What I Learn 👌🏾 </h2></p>
+    <p> 1. Let vs Const </p>
+    <p> 2. If and Else statements</p>
+   
+    <h2>Lost In The Sauce 🤷🏾‍♀️ </h2>
+    <ul id="IDK">
+            <li> Break Statements <button class="alert-button">Click Me</button> </li>
+            <li> Return Statements<button class="alert-button">Click Me</button> </li>
+            <li> Loops <button class="alert-button">Click Me</button> </li>
+            <li> Continue Statment <button class="alert-button">Click Me</button> </li>
+            <li> Error Handling <button class="alert-button"> Click Me </button> </li>
+            <li> Making a Button <button class="alert-button"> Click Me </button> </li>
+    </ul>
+    <script>
+        // Get all buttons with the class "alert-button"
+const alertButtons = document.querySelectorAll('.alert-button');
+
+// Iterate over each button and add an event listener
+alertButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get the text content of the parent list item (the <li> element)
+        const listItemText = button.parentElement.textContent.trim();
+        
+        // Show an alert with the text content of the list item
+        alert(`You clicked on: ${listItemText}`);
+    });
+});
+
+    </script>
+</body>
+</html>
